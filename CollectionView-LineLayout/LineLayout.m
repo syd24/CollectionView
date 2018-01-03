@@ -46,4 +46,35 @@
     return CGPointMake(proposedContentOffset.x + offSetAdjustment, proposedContentOffset.y);
 }
 
+- (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect{
+    
+    NSArray *original = [super layoutAttributesForElementsInRect:rect];
+    NSArray *array = [[NSArray alloc] initWithArray:original copyItems:YES];
+    
+    CGRect visibleRect;
+    visibleRect.origin = self.collectionView.contentOffset;
+    visibleRect.size = self.collectionView.bounds.size;
+    
+    for (UICollectionViewLayoutAttributes * attributes in array) {
+        //判断相交
+        if (CGRectIntersectsRect(visibleRect, rect)) {
+            //当前视图中心点 距离item中心点距离
+       CGFloat  distance  =  CGRectGetMidX(self.collectionView.bounds) - attributes.center.x;
+            CGFloat  normalizedDistance = distance / 200;
+            if (ABS(distance) < 200) {
+                CGFloat zoom = 1 + 0.4 * (1 - ABS(normalizedDistance));
+                attributes.transform3D = CATransform3DMakeScale(zoom, zoom, 1);
+                attributes.zIndex = 1;
+            }
+        }
+    }
+    
+    return array;
+}
+
+
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds{
+    return YES;
+}
+
 @end
