@@ -1,0 +1,43 @@
+//
+//  PrefixHeader.pch
+//  BaiJie
+//
+//  Created by ADMIN on 17/6/28.
+//  Copyright © 2017年 ADMIN. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#define WriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/admin/Desktop/%@.plist", @#filename] atomically:YES];
+
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+#define RootV [UIApplication sharedApplication].keyWindow.rootViewController.view
+#define iphone6P (ScreenH == 736)
+#define iphone6  (ScreenH == 667)
+#define iphone5  (ScreenH == 568)
+#define iphone4  (ScreenH == 480)
+
+
+// 颜色
+#define SYDARGBColor(a, r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define SYDColor(r, g, b) SYDARGBColor(255, (r), (g), (b))
+#define SYDGrayColor(v) SYDColor((v), (v), (v))
+#define SYDCommonBgColor SYDGrayColor(215)
+#define SYDTableViewbackgroundColor SYDGrayColor(206)
+
+#import "SYDBaseViewController.h"
+#import "UIBarButtonItem+SYDBarButtonItem.h"
+#import "UIView+SYDFrame.h"
+#import "SYDConst.h"
+#import "SYDNetworkTools.h"
+#import <MJExtension/MJExtension.h>
+#import "UIImageView+WebCache.h"
+#import "UIImageView+SYDImageView_DownLoad.h"
+#import <Masonry/Masonry.h>
+#import "NSDate+SYDCalendar.h"
+#import <MJRefresh/MJRefresh.h>
+
+#endif /* PrefixHeader_pch */

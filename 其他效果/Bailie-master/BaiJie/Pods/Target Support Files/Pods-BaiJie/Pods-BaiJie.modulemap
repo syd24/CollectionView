@@ -1,0 +1,6 @@
+framework module Pods_BaiJie {
+  umbrella header "Pods-BaiJie-umbrella.h"
+
+  export *
+  module * { export * }
+}

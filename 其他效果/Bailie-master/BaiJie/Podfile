@@ -1,0 +1,23 @@
+platform :ios, '9.0'
+
+use_frameworks!
+
+target 'BaiJie' do
+
+pod 'AFNetworking', '~> 3.1.0'
+pod 'MJExtension', '~> 3.0.13'
+pod 'SDWebImage', '~> 4.0.0'
+## 圆形进度条
+pod 'DACircularProgress', '~> 2.3.1'
+
+pod 'SVProgressHUD', '~> 2.1.2'
+pod 'MJRefresh', '~> 3.1.12'
+
+##播放gif图
+pod 'FLAnimatedImage', '~> 1.0.12'
+
+pod 'Masonry', '~> 1.0.2'
+
+
+
+end

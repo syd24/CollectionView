@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewPrettyCell" customModule="DouYu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="199" height="226"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="199" height="226"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTF-qg-FGy">
+                        <rect key="frame" x="0.0" y="192" width="68" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29" id="MdM-pe-uA2"/>
+                        </constraints>
+                        <state key="normal" title="上海市" image="ico_location">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我们要好好的，" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddd-2p-Bmd">
+                        <rect key="frame" x="0.0" y="164" width="194" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="iJ2-1l-dEW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-ie-f4F">
+                        <rect key="frame" x="0.0" y="0.0" width="199" height="154"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIW-Xs-Ma2">
+                        <rect key="frame" x="138" y="10" width="56" height="30"/>
+                        <color key="backgroundColor" red="0.0077102421465968796" green="0.0077102421465968796" blue="0.0077102421465968796" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="666666">
+                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7ad-ie-f4F" secondAttribute="trailing" id="1F4-IN-Wea"/>
+                <constraint firstAttribute="bottom" secondItem="iTF-qg-FGy" secondAttribute="bottom" constant="5" id="2cb-i9-tGN"/>
+                <constraint firstItem="7ad-ie-f4F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2qv-xz-uUH"/>
+                <constraint firstItem="XIW-Xs-Ma2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="4i5-MZ-v4h"/>
+                <constraint firstItem="iTF-qg-FGy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8q9-oC-Ehm"/>
+                <constraint firstAttribute="trailing" secondItem="XIW-Xs-Ma2" secondAttribute="trailing" constant="5" id="D8n-We-Ugg"/>
+                <constraint firstItem="ddd-2p-Bmd" firstAttribute="top" secondItem="7ad-ie-f4F" secondAttribute="bottom" constant="10" id="DTE-bw-26g"/>
+                <constraint firstItem="iTF-qg-FGy" firstAttribute="top" secondItem="ddd-2p-Bmd" secondAttribute="bottom" id="Ouj-on-15M"/>
+                <constraint firstItem="ddd-2p-Bmd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="chp-4d-ZhZ"/>
+                <constraint firstItem="7ad-ie-f4F" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mNX-Ff-d7k"/>
+                <constraint firstAttribute="trailing" secondItem="ddd-2p-Bmd" secondAttribute="trailing" constant="5" id="sSF-M4-SgA"/>
+            </constraints>
+            <size key="customSize" width="199" height="226"/>
+            <connections>
+                <outlet property="bgImage" destination="7ad-ie-f4F" id="qkI-zM-3CE"/>
+                <outlet property="city" destination="iTF-qg-FGy" id="kOt-1O-9Nj"/>
+                <outlet property="onLine" destination="XIW-Xs-Ma2" id="qch-Yp-Nsg"/>
+                <outlet property="titltNameLabel" destination="ddd-2p-Bmd" id="hcX-6w-GF9"/>
+            </connections>
+            <point key="canvasLocation" x="17.5" y="-13"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ico_location" width="12" height="12"/>
+        <image name="live_cell_default_phone" width="103" height="103"/>
+    </resources>
+</document>
