@@ -43,8 +43,16 @@
     headView.backgroundColor = [UIColor clearColor];
     _tableView.tableHeaderView = headView;
     
+    [self initTopBarView];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(acceptMes:) name:TABLELEAVETOP object:nil];
     
+}
+
+- (void)initTopBarView{
+    UIView *topBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), KTopBarHeight)];
+    [self.view addSubview:topBarView];
+    topBarView.backgroundColor = [UIColor redColor];
 }
 
 //titleView
