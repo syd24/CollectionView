@@ -93,28 +93,28 @@
     NSInteger section  = indexPath.section;
     
     if (section==0) {
-        UILabel *textlabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, CGRectGetWidth(self.view.frame), 20)];
+        UILabel *textlabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 60)];
         [cell.contentView addSubview:textlabel];
-        textlabel.text = @"价格区";
+        textlabel.text = @"section";
         textlabel.textAlignment = NSTextAlignmentCenter;
     }else if(section==1){
-        UILabel *textlabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(self.view.frame), 20)];
+        UILabel *textlabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 100)];
         [cell.contentView addSubview:textlabel];
-        textlabel.text = @"sku区";
+        textlabel.text = @"sectionOne";
         textlabel.textAlignment = NSTextAlignmentCenter;
     }else if(section==2){
         NSArray *tabConfigArray = @[@{
-                                        @"title":@"图文介绍",
+                                        @"title":@"第一个",
                                         @"view":@"PicAndTextIntroduceView",
                                         @"data":@"图文介绍的数据",
                                         @"position":@0
                                         },@{
-                                        @"title":@"商品详情",
+                                        @"title":@"第二个",
                                         @"view":@"ItemDetailView",
                                         @"data":@"商品详情的数据",
                                         @"position":@1
                                         },@{
-                                        @"title":@"评价(273)",
+                                        @"title":@"第三个",
                                         @"view":@"CommentView",
                                         @"data":@"评价的数据",
                                         @"position":@2
